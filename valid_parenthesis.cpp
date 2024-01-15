@@ -4,11 +4,11 @@ int main(){
     string s="({[]})";
     stack<char> st;
     for(char c :s){
-        if(c=="{" || c=="[" ||c=="("){
+        if(c =="{" || c =="[" ||c =="("){
             st.push(c);
         }
         else{
-            if(st.empty() || (st.top()!="(" && c==")") || (st.top() != "{" && c=="}") || (st.top()!="[" && c=="]")){
+            if(st.empty() || (c == ")" && st.top() != ")") ){
                 cout<<"false";
                 return false;
             }

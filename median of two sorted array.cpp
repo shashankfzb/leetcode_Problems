@@ -13,7 +13,9 @@ int main(){
     sort(arr1.begin(),arr1.end());
 
     if(n%2==0){
-        int m=n/2;
         cout<<(arr1[n/2]+arr1[(n/2)-1])/2;
+    }
+    else{
+        cout<<arr1[((n+1)/2)-1]
     }
 }
