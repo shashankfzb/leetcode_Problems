@@ -11,7 +11,7 @@ int main(){
         arr[b]=temp;
         i++;
     }
-    int j=0;4
+    int j=0;
     while(j < (sizeof(arr)/sizeof(int))){
         cout<<arr[j]<<endl;
         j++;
