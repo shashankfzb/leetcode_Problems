@@ -9,10 +9,10 @@ int main(){
         freq[str[i]]++;
         
     }
-    int k=4;
     for(int i=0;i<256;i++){
-        if(freq[i]==k){
-            cout<<char(i)<<" : "<<freq[i]<<endl;
+        if(freq[i]!=0){
+             cout<<char(i)<<" : "<<freq[i]<<endl;
+
         }
     }
 }

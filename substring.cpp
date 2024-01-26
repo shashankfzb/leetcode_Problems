@@ -24,6 +24,6 @@ int main(){
             }
         }
     }
-    cout<<"your result is: "<<result;
+    cout<<"your result is (index position is returned) : "<<result;
 
 }
