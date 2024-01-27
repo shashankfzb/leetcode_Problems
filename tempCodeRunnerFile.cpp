@@ -1,30 +1,24 @@
-//Given an array of bird sightings where every element represents a bird type id,
-// determine the id of the most frequently sighted type.
-// If more than 1 type has been spotted that maximum amount, return the smallest of their ids.
 #include<iostream>
-
 using namespace std;
 int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    int max=0;
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-        if(arr[i]>max){
-            max=arr[i];
+    int n=4;
+    int nums[n]={1,2,3,4};
+    int result[n]={1};
+    int leftProduct = 1;
+        for (int i = 0; i < n; i++) {
+            result[i] *= leftProduct;
+            leftProduct *= nums[i];
         }
-    }
-    
-    int freq[max+1]={0};
-    for(int i=0;i<n;i++){
-        freq[arr[i]]++;
-    }
-    cout<<"answer is:"<<endl;
-    for(int i=0;i<=max;i++){
-        if(freq[i]!=0){
-            cout<<i<<" : "<<freq[i]<<endl;
+
+        // Calculate products to the right of each element
+        int rightProduct = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            result[i] *= rightProduct;
+            rightProduct *= nums[i];
         }
+    cout<<"(";
+    for(int i=0;i<n;i++){
+        cout<<result[i]<<" ";
     }
-    
+    cout<<")";
 }
