@@ -1,9 +1,13 @@
-bool ans;
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<string> words={"xngla","e","itrn","y","s","pfp","rfd"};
+    bool ans;
     string str;
     for(int j=0;j<words.size();j++){
         int l=words[j].length();
-        cout<<l<<endl;
-        for(int i=0;i<l-1;i++){
+        for(int i=0;i<=l-1;i++){
             if(words[j][i]==words[j][l-1]){
                 ans=true;
                 l--;
@@ -19,3 +23,5 @@ bool ans;
             break;
         }
     }
+    cout<<str;
+}
